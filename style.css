@@ -1,0 +1,78 @@
+/* Base Reset for Printing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 12pt;
+  line-height: 1.4;
+  background: white;
+  color: black;
+  padding: 6px;
+}
+
+/* Remove anything unnecessary (if any remains) */
+header,
+footer,
+nav,
+.ads,
+.sidebar {
+  display: none !important;
+}
+
+/* Prevent tables from breaking mid-row across pages */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+  page-break-inside: avoid;
+}
+
+thead {
+  background: #f0f0f0;
+}
+
+th,
+td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr {
+  page-break-inside: avoid;
+  page-break-after: auto;
+}
+
+/* Optional: Zebra striping for large tables */
+tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* Ensure page margins don’t get cut */
+@page {
+  margin: 1in;
+}
+
+/* Media print-specific overrides */
+@media print {
+  body {
+    margin: 0;
+  }
+
+  table {
+    font-size: 11pt;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

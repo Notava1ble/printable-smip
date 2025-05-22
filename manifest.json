@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Print Styler",
+  "version": "1.0",
+  "description": "Modifies the page HTML and CSS for better printing.",
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Apply print styles"
+  }
+}
